@@ -1,0 +1,52 @@
+.bsnav-light {
+	background: transparent;
+	left: 0;
+	right: 0;
+	position: absolute;
+
+	.navbar-nav .nav-item { color: #fff; }
+	.navbar-toggler .navbar-toggler-icon{
+		&,
+		&::before,
+		&::after { background-color: #fff; }
+	}
+
+	.nav-item .caret { border-top-color: #fff; }
+
+	$navbar-radius: 4px;
+	$navbar-shadow: 0 2px 14px rgba(#000,.15);
+	$navbar-margin: 3px;
+
+	.nav-item.dropdown {
+		> .navbar-nav {
+			background: #fff;
+			border-radius: $navbar-radius;
+			box-shadow: $navbar-shadow;
+
+			.navbar-nav {
+				background: #fff;
+				margin-left: $navbar-margin;
+				border-radius: $navbar-radius;
+				box-shadow: $navbar-shadow;
+			}
+		}
+
+		&.dropdown-right {
+			> .navbar-nav .navbar-nav {
+				margin-left: 0;
+				margin-right: $navbar-margin;
+			}
+		}
+
+		.nav-item { color: #000; }
+	}
+
+	.nav-item.dropdown.dropdown-horizontal {
+		> .navbar-nav {
+			left: 15px;
+			right: 15px;
+
+			&.in .navbar-nav { margin-left: 0; }
+		}
+	}
+}

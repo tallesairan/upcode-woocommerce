@@ -1,0 +1,49 @@
+@import "up/functions";
+
+body.login {
+  background-color: up-colors("primary");
+  
+  #loginform {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    box-shadow: none;
+    
+    label {
+      color: black;
+      font-weight: 500;
+    }
+
+    input {
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    
+    #wp-submit {
+      border: none;
+      background: up-colors("primary") !important;
+      box-shadow: none;
+      padding: 0 20px;
+      text-shadow: none;
+    }
+  }
+
+  #nav,
+  #backtoblog {
+    color: black !important;
+    text-align: center;
+    padding-left: 0;
+    
+    a {
+      color: black !important;
+      text-decoration: none;
+      text-shadow: none;
+    
+      &:hover {
+        color: black !important;
+        text-decoration: underline;
+      }
+    }
+  }
+}

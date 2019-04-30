@@ -1,0 +1,58 @@
+.nav-item.dropdown.pop { 
+	> .navbar-nav {
+		display: none;
+		clip: initial;
+
+		&.in { display: block; }
+	}
+}
+
+.nav-item.dropdown.fade {
+	opacity: 1;
+
+	> .navbar-nav {
+		opacity: 0;
+		visibility: hidden;
+		display: block;
+		transition: .3s;
+
+		&.in {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.nav-item.dropdown.fadeup {
+	> .navbar-nav {
+		margin-top: 30px;
+		opacity: 0;
+		visibility: hidden;
+		display: block;
+		transition: .3s;
+
+		&.in {
+			margin-top: 0;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.nav-item.dropdown.zoom {
+	> .navbar-nav {
+		opacity: 0;
+		visibility: hidden;
+		display: block;
+		transform: scale(1.1);
+		transition: .3s;
+
+		&.in {
+			opacity: 1;
+			visibility: visible;
+			transform: scale(1);
+		}
+	}
+}
+
+.nav-item.dropdown.dropdown-right > .navbar-nav { right: 0; }

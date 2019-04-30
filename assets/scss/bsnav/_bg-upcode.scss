@@ -1,0 +1,111 @@
+.bsnav-mobile {
+  ul.navbar-nav {
+    li.nav-item {
+      a.nav-link{
+        color: up-colors('second');
+      }
+      &.menu-item-has-children {
+        .nav-link {
+          color: up-colors('second');
+        }
+        .dropdown-menu{
+          background-color: transparent;
+          box-shadow: none;
+          border: none;
+          .dropdown-item{
+            padding: 0.25rem 0.25rem;
+            color: up-colors('second');
+            text-transform: uppercase;
+            @include font(14px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.bsnav-upcode {
+
+  background: transparent;
+  right: 0;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 72px !important;
+
+  .navbar-nav .nav-item {
+    color: up-colors('six');
+  }
+  .nav-link {
+    color: $blue;
+    &:hover {
+      color: $yellow;
+    }
+  }
+  .navbar-toggler {
+    margin: 0 auto;
+    .navbar-toggler-icon {
+      &,
+      &::before,
+      &::after {
+        background-color: up-colors('first');
+      }
+    }
+  }
+
+  .nav-item .caret {
+    border-top-color: #fff;
+    display: none;
+  }
+
+  $navbar-radius: 4px;
+  $navbar-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+  $navbar-margin: 3px;
+
+  .nav-item.dropdown {
+    > .navbar-nav {
+      background: white;
+      border-radius: $navbar-radius;
+      box-shadow: $navbar-shadow;
+
+      .navbar-nav {
+        background: #fff;
+        margin-left: $navbar-margin;
+        border-radius: $navbar-radius;
+        box-shadow: $navbar-shadow;
+
+      }
+    }
+
+    &.dropdown-right {
+      > .navbar-nav .navbar-nav {
+        margin-left: 0;
+        margin-right: $navbar-margin;
+      }
+    }
+
+    .nav-item {
+      color: up-colors('six');
+      .nav-link {
+        text-align: center;
+        border-bottom: 1.3px solid #cccccc;
+        &:hover {
+          background-color: $yellow;
+          color: up-colors('six');
+        }
+      }
+    }
+  }
+
+  .nav-item.dropdown.dropdown-horizontal {
+    > .navbar-nav {
+      left: 15px;
+      right: 15px;
+
+      &.in .navbar-nav {
+        margin-left: 0;
+      }
+    }
+  }
+}

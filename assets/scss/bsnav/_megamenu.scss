@@ -1,0 +1,29 @@
+.dropdown.megamenu {
+	position: static;
+
+	> .navbar-nav {
+		width: 100vw;
+		padding: 15px;
+		left: 0;
+
+		.navbar-nav {
+			width: auto;
+			position: initial;
+		}
+
+		.nav-item {
+			.nav-link {
+				padding: 7px 0;
+			}
+		}
+
+		&.in { clip: rect(0,100vw,2000px,0); }
+	}
+
+	&.fade > .navbar-nav,
+	&.pop > .navbar-nav,
+	&.zoom > .navbar-nav,
+	&.fadeup > .navbar-nav {
+		clip: rect(0,100vw,2000px,0);
+	}
+}

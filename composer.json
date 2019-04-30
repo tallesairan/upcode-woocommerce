@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {
+      "App\\": "App"
+    }
+  },
+  "require": {
+    "tareq1988/wp-eloquent": "dev-master",
+    "afragen/wp-dependency-installer": "^1.4"
+  }
+}

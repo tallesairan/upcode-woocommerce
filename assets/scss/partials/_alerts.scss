@@ -1,0 +1,113 @@
+/**
+ * Message / Alerts
+ */
+
+.woocommerce-notices-wrapper { width: 100%;}
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info {
+  font-family: up-fonts('first');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 10px 55px;
+  margin: 0 0 2em;
+  position: relative;
+  border: 1px solid #f1f1f1;
+  background-color: transparent;
+  color: $txt;
+  border-top: 3px solid $txt;
+  list-style: none outside;
+  width: 100%;
+  min-height: 70px;
+  word-wrap: break-word;
+  text-align: center;
+  @include light();
+  @include clearfix();
+
+  @media (min-width: 768px) {
+    text-align: left;
+    flex-direction: row;
+  }
+  
+  &::before {
+    font-family: 'WooCommerce';
+    content: '\e028';
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 1.5em;
+  }
+
+  &::after { display: none; }
+  
+  li {
+    list-style: none outside !important; // Required for default theme compatibility
+    padding-left: 0 !important; // Required for default theme compatibility
+    margin-left: 0 !important; // Required for default theme compatibility
+  }
+  
+  a {
+    color: $txt;
+    text-align: center;
+    margin: 10px 0 0;
+    @include semi();
+    
+    @media (min-width: 768px) {
+      text-align: left;
+      margin: 0;
+    }
+
+    &.button {
+      @extend .bt-global;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 180px;
+      order: 1;
+      max-width: 25%;
+      flex: 0 0 25%;
+      color: white;
+      margin: 15px 0 0;
+      @include medium();
+
+      @include media-breakpoint-up(md) {
+        min-width: inherit;
+        margin: 0;
+      } // Large devices (desktops, 768px and up)
+    }
+  }
+}
+
+.woocommerce-message {
+  border-top-color: $bg;
+  &::before {
+    content: '\e015';
+    color: $bg;
+  }
+}
+
+.woocommerce-info {
+  border-top-color: $txt;
+  &::before {
+    color: $txt;
+  }
+}
+
+.woocommerce-error {
+  flex-direction: column;
+  border-top-color: darken($primary, 2);
+
+  li {
+    font-family: up-fonts('first');
+    strong {
+      @include semi();
+    }
+  }
+
+  &::before {
+    content: '\e016';
+    color: darken($primary, 2);
+  }
+}

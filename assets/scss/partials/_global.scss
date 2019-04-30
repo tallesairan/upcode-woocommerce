@@ -1,0 +1,91 @@
+/**
+ * Global styles
+ */
+
+p.demo_store,
+.woocommerce-store-notice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 1em;
+  padding: 1em 0;
+  text-align: center;
+  background-color: $primary;
+  color: $primarytext;
+  z-index: 99998;
+  box-shadow: 0 1px 1em rgba(0, 0, 0, 0.2);
+  display: none;
+  
+  a {
+    color: $primarytext;
+    text-decoration: underline;
+  }
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.admin-bar p.demo_store { top: 32px; }
+
+/**
+  * Utility classes
+  */
+
+.clear { clear: both; }
+  p#billing_address_2_field {
+    margin: 2rem 0 1rem 0;
+  }
+p#shipping_address_2_field {
+  margin: 2rem 0 1rem 0;
+}
+.form-row label {
+
+  font-family: Rubik, sans-serif;
+  @include font(15px);
+  color: #1f2b4a;
+}
+.classic-control, .input-text  {
+  width: 100%;
+  padding: 10px;
+  margin: 0 0 0;
+  font-family: up-fonts('first');
+  letter-spacing: 0;
+  line-height: 15px;
+  color: up-colors('first');
+  outline: none;
+  border: 1px solid up-colors('first');
+  margin-bottom: 3px;
+  @include font(14px);
+  @include normal();
+  @include radius(0);
+  @include placeholder {
+    font-family: up-fonts('first');
+    letter-spacing: 0;
+    line-height: 15px;
+    color: up-colors('first');
+  }
+  
+  &.wpcf7-not-valid { border-color: red; }
+  
+  &:focus {
+    outline: none;
+    color: darken(up-colors('second'),22%);
+    border-color: darken(up-colors('second'),22%);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+button.classic-btn {
+  @extend .bt-global;
+}

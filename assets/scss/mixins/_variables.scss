@@ -1,0 +1,26 @@
+/**
+ * WooCommerce CSS Variables
+ */
+
+@import '../bootstrap/variables';
+@import '../bootstrap/mixins';
+@import '../up/functions';
+
+
+$woocommerce:       black;
+$green:         	#7ad03a;
+$red:           	#a00;
+$orange:        	#ffba00;
+$blue:          	#2ea2cc;
+
+$primary:           black; // Primary color for buttons (alt)
+$primarytext:       white; // Text on primary color bg
+
+$secondary:         black; // Secondary buttons
+$secondarytext:     $primarytext; // Text on secondary color bg
+
+$highlight:         black; // Prices, In stock labels, sales flash
+$highlightext:      $primarytext;  // Text on highlight color bg
+
+$contentbg:         #fff; // Content BG - Tabs (active state)
+$subtext:           #777; // small, breadcrumbs etc
