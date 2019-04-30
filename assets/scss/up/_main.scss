@@ -758,6 +758,7 @@ html {
 
 
 }
+// blocks custom style
 .wp-block-file {
   padding: 5px 5px;
   border: 1px solid #32373b;
@@ -768,4 +769,10 @@ html {
 figure.wp-block-image {
   display: flex;
   justify-content: center;
+}
+.wp-block-columns{
+  margin: 0;
+  .advgb-image-block{
+    margin: 0;
+  }
 }
