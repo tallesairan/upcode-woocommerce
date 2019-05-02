@@ -74,7 +74,7 @@ main#content {
           h3 {
           }
           p {
-            color: up-colors('teen');
+            color: up-colors('first');
             @include font(15px);
           }
         }
@@ -104,64 +104,12 @@ main#content {
 section {
   max-width: 1920px;
   margin: 0 auto;
-  &.tv-agos {
-    padding: 33px 0;
-  }
-  &.gradient{
-
-    background: rgb(255,203,14);
-
-    background: -moz-linear-gradient(90deg, rgba(255,203,14,1) 67%, rgba(250,250,250,1) 30%, rgba(250,250,250,1) 10%);
-    background: -webkit-linear-gradient(90deg, rgba(255,203,14,1) 67%, rgba(250,250,250,1) 30%, rgba(250,250,250,1) 10%);
-    background: linear-gradient(90deg, rgba(255,203,14,1) 67%, rgba(250,250,250,1) 30%, rgba(250,250,250,1) 10%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffcb0e",endColorstr="#fafafa",GradientType=1);
-
-    @include media-breakpoint-up('sm'){
-      background: -moz-linear-gradient(90deg, rgba(255,203,14,1) 50%, rgba(250,250,250,1) 50%, rgba(250,250,250,1) 100%);
-      background: -webkit-linear-gradient(90deg, rgba(255,203,14,1) 50%, rgba(250,250,250,1) 50%, rgba(250,250,250,1) 100%);
-      background: linear-gradient(90deg, rgba(255,203,14,1) 50%, rgba(250,250,250,1) 50%, rgba(250,250,250,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffcb0e",endColorstr="#fafafa",GradientType=1);
-    }
-    min-height: 240px;
-    margin: 5rem 0 4rem 0;
-    div{
-      h2{
-
-        @include font(43px);
-        small{
-          @include font(20px);
-          @include bold();
-
-        }
-
-      }
-      span{
-        color: up-colors('first');
-        @include font(20px);
-        @include bold();
-
-      }
-      figure{
-        img{
-          &.capa{
-            transform: scale(1.2);
-            padding-right: 1rem;
-          }
-        }
-      }
-    }
-
-  }
+ 
 
 
 }
 
-.wp-block-columns{
-  margin: 0;
-  .advgb-image-block{
-    margin: 0;
-  }
-}
+
 aside
 {
   &.aside-parent{
@@ -295,16 +243,6 @@ footer {
         @include font(20px);
         @include medium();
       }
-    }
-    .borderedCol {
-      border-right: 1px solid $gray-100;
-      &:last-child {
-        border: none;
-      }
-    }
-    .copy {
-      font-size: 15px;
-      font-weight: 300;
     }
   }
 }

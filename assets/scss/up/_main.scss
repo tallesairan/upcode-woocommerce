@@ -273,14 +273,6 @@ ul {
   }
 }
 
-.upcf7 {
-  .wpcf7 {
-    button {
-
-    }
-  }
-}
-
 .wpcf7 {
   input {
     outline: none;
@@ -453,9 +445,6 @@ ul {
   }
   &.assoc {
     div.wpcf7 {
-
-
-
       form.wpcf7-form {
         display: flex;
         flex-direction: column;
@@ -706,57 +695,6 @@ button {
 html {
   margin-top: 0 !important;
   margin: 0 !important;
-}
-
-.ccol {
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
-.custom-embed {
-  margin-top: 2rem;
-  position: relative;
-  .embed-responsive {
-    z-index: 9;
-    box-shadow: 0 0 5px 0px #162036;
-    border-radius: 2px;
-    iframe {
-      background-color: rgb(32, 45, 78);
-
-    }
-  }
-  @include media-breakpoint-up('sm'){
-    &:before {
-      display: block;
-      content: "";
-      background-image: -moz-linear-gradient(-90deg, rgb(255, 184, 14) 0%, rgb(255, 205, 14) 100%);
-      background-image: -webkit-linear-gradient(-90deg, rgb(255, 184, 14) 0%, rgb(255, 205, 14) 100%);
-      background-image: -ms-linear-gradient(-90deg, rgb(255, 184, 14) 0%, rgb(255, 205, 14) 100%);
-      position: absolute;
-      left: 1px;
-      top: -12px;
-      width: 300px;
-      height: 343px;
-      z-index: 2;
-
-    }
-    &:after {
-      display: block;
-      content: "";
-      background-color: rgb(32, 45, 78);
-      position: absolute;
-      right: 2px;
-      bottom: -12px;
-      width: 300px;
-      height: 343px;
-      z-index: 2;
-
-    }
-  }
-
-
 }
 // blocks custom style
 .wp-block-file {
